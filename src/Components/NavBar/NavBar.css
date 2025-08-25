@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #ffe6f2;  
+  border-bottom: 2px solid #f8bbd0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #d63384;  
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  color: #6a1b9a;  
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li:hover {
+  color: #ad1457;  
+}
