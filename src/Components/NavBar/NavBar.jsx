@@ -1,17 +1,39 @@
-import CartWidget from "../CartWidget/CartWidget.jsx";
+import { NavLink } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
-      <h2 className="brand">Delicakes</h2>
-      <ul className="menu">
-        <li>Cakes</li>
-        <li>Mini Pastelería</li>
-        <li>Cookies</li>
-      </ul>
+    <header className="navbar">
+      <h1 className="logo">Delicakes 🧁</h1>
+      
+      <nav>
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
+              Inicio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/category/cakes" className={({ isActive }) => isActive ? "active" : ""}>
+              Cakes
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/category/mini" className={({ isActive }) => isActive ? "active" : ""}>
+              Mini Pastelería
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/category/cookies" className={({ isActive }) => isActive ? "active" : ""}>
+              Cookies
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+
       <CartWidget />
-    </nav>
+    </header>
   );
 };
 
